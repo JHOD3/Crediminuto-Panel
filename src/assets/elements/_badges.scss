@@ -11,6 +11,9 @@
   text-transform: uppercase;
   padding: 5px 10px;
   min-width: 19px;
+  background: $white;
+  padding: 1px 3px !important;
+  font-size: 8px !important;
 }
 
 .badge-light {
@@ -18,7 +21,7 @@
 }
 
 .badge-dot {
-  text-indent: -999em;
+  //text-indent: -999em;
   padding: 0;
   width: 8px;
   height: 8px;
@@ -51,8 +54,10 @@
 }
 
 .badge-dot-sm {
-  width: 6px;
-  height: 6px;
+  min-width: 8px;
+  min-height: 8px;
+  width: auto;
+  height: auto;
 }
 
 .btn {
