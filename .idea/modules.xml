@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Panel de control.iml" filepath="$PROJECT_DIR$/.idea/Panel de control.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../architectui-html-pro-theme/.idea/architectui-html-pro-theme.iml" filepath="$PROJECT_DIR$/../architectui-html-pro-theme/.idea/architectui-html-pro-theme.iml" />
+    </modules>
+  </component>
+</project>
