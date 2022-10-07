@@ -15,13 +15,13 @@
 
 .nav-tabs {
   .nav-link {
-
+    color: $gray-300;
     &:hover {
-      color: $primary !important;
+      color: $gray-700 !important;
     }
 
     &.active {
-      color: $primary;
+      color: $gray-700;
     }
   }
 }

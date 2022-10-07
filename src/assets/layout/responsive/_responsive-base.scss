@@ -7,7 +7,9 @@
 }
 
 @include media-breakpoint-down(md) {
-
+  .vertical-nav-menu {
+    border-top: none !important;
+  }
   .app-main {
     display: block;
   }
@@ -21,10 +23,10 @@
 
   .app-sidebar {
     flex: 0 0 $app-sidebar-width !important;
-    width: $app-sidebar-width !important;
-    transform: translateX(-$app-sidebar-width);
+    width: 100% !important;
+    transform: translateX(-720px);
     position: fixed;
-
+    margin-top: -72px;
     .app-header__logo {
       display: none;
     }
@@ -35,7 +37,8 @@
     .app-sidebar {
 
       transform: translateX(0);
-
+      padding-top: 0px;
+      margin-top: -72px;
       .app-sidebar__inner {
 
         .app-sidebar__heading {
@@ -81,8 +84,8 @@
       }
 
       .app-header__logo {
-        width: auto !important;
-
+        width: 100% !important;
+        display: none !important;
         .logo-src {
           width: $logo-width !important;
           margin-left: auto;
@@ -109,7 +112,6 @@
 
   .app-header {
     justify-content: space-between;
-
     .app-header__logo {
       display: none;
       order: 2;

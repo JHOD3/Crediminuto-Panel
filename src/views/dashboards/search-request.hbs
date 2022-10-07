@@ -1,0 +1,418 @@
+{{#> base }}
+    {{> AppSidebar/sidebar-cm dashboards-search-request=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header bg-white rounded-2 px-3">
+                            <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <h5 class="fw-light mb-0 text-muted">Buscar solicitud</h5>
+                            </button>
+                        </div>
+                        <div class="card-body pb-5" id="collapseExample">
+                            <form action="" class="row g-3 needs-validation" novalidate>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="exampleEmail" class="">Nombre / Apellido / Cédula / Email / Device tag</label>
+                                    <input name="text" id="exampleEmail" placeholder="Ingresa un dato personal" class="form-control mt-2 is-valid" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="exampleEmail" class="">Fecha de otorgamiento</label>
+                                    <input type="text" class="form-control mt-2 is-invalid" required placeholder="DD/MM/AAAA" data-toggle="datepicker-month">
+                                    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                        Please choose a username.
+                                    </div>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="status" class="">Status en Crediminuto</label>
+                                    <select name="select" id="status" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="fecha" class="">Rango de fechas de otorgamiento</label>
+                                    <input type="text" name="datetimes" class="form-control mt-2" required placeholder="DD/MM/AAAA">
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="type-prestamo" class="">Tipo de préstamo</label>
+                                    <select name="select" id="type-prestamo" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="abandono" class="">Paso de abandono</label>
+                                    <select name="select" id="abandono" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona un paso</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="telefono" class="">Número de teléfono</label>
+                                    <input name="text" id="telefono" placeholder="Ingresa un dato personal" class="form-control mt-2" required>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="frecuencia" class="">Frecuencia de pago</label>
+                                    <select name="select" id="frecuencia" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una frecuencia</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="exampleEmail" class="">Origen</label>
+                                    <select name="select" id="exampleSelect" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona un origen</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="">Llamada de bienvenida</label>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="position-relative form-check">
+                                            <label class="form-check-label" for="call-1">
+                                                <input type="radio" name="call" id="call-1" class="form-check-input"> Sí
+                                            </label>
+                                        </div>
+                                        <div class="position-relative form-check ms-4">
+                                            <label class="form-check-label" for="call-2">
+                                                <input type="radio" name="call" id="call-2" class="form-check-input"> No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <button class="mt-1 btn btn-primary-cm rounded-4">BUSCAR</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header bg-white rounded-2 px-3">
+                            <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <h5 class="fw-light mb-0 text-muted">Listado de solicitudes</h5>
+                            </button>
+                            <div class="btn-actions-pane-right actions-icon-btn">
+                                <div class="btn-group dropdown">
+                                    <button type="button" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-shadow dropdown-menu-right dropdown-menu-hover-link dropdown-menu">
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            Ocultar
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Resetear</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Imprimir</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Descargar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pb-5" id="collapseExample1">
+
+                            <!--Tabla de datos-->
+                            <table class="table " id="example" data-page-length='5'>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>ID préstamo</th>
+                                        <th>Nombre y apellido</th>
+                                        <th>Otorgamiento</th>
+                                        <th>Tipo de producto</th>
+                                        <th>Status</th>
+                                        <th>Retailer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-cheked-file"></i>
+                                            </a>
+                                            <a href="" class="link-icon-hover-danger">
+                                                <i class="crediminuto icons-slim-edit"></i>
+                                            </a>
+                                        </td>
+                                        <td>208069</td>
+                                        <td>Kelly Katherine Palmezano Gomez</td>
+                                        <td>05/08/2022</td>
+                                        <td>ZEROTOUCH_RETAILER</td>
+                                        <td>Otorgado</td>
+                                        <td>LTE COLOMBIA S.A.S</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/ base }}

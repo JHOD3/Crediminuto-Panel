@@ -70,3 +70,8 @@ legend {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+.form-check-input:checked {
+  background-color: $primary-cm;
+  border-color: $primary-cm;
+}

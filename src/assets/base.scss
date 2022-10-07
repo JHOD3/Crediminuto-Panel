@@ -13,7 +13,7 @@
 @import "../../node_modules/bootstrap/scss/utilities";
 
 
-@import "themes/layout-variables";
+@import "themes/default/variables";
 
 // Layout & components
 @import "../../node_modules/bootstrap/scss/root";
@@ -147,4 +147,5 @@
 @import "layout/responsive/responsive-base";
 // DEMO
 @import "demo-ui/demo";
+@import "utils/cm-icons";
 @import "custom/custom_class";

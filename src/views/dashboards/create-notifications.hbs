@@ -1,0 +1,164 @@
+{{#> base }}
+    {{> AppSidebar/sidebar-cm dashboards-create-notifications=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header bg-white rounded-2 px-3 d-flex">
+                            <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAddNotification" aria-expanded="true" aria-controls="collapseAddNotification">
+                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <h5 class="fw-light mb-0 text-muted">Crear notificación</h5>
+                            </button>
+                            <div class="btn-actions-pane-right actions-icon-btn">
+                                <div class="btn-group dropdown">
+                                    <button type="button" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-shadow dropdown-menu-right dropdown-menu-hover-link dropdown-menu">
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            Ocultar
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Resetear</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Imprimir</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Descargar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pb-5 collapsed show" id="collapseAddNotification">
+                            <form action="" class="row">
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="canal" class="">Canal</label>
+                                    <select name="select" id="canal" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="status" class="">Status</label>
+                                    <select name="select" id="status" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="equipo" class="">Equipo</label>
+                                    <select name="select" id="equipo" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="asunto" class="">Asunto</label>
+                                    <select name="select" id="asunto" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="name" class="">Nombre</label>
+                                    <input name="text" id="name" placeholder="Ingresa un dato personal" class="form-control mt-2" required>
+                                </div>
+                                <div class="position-relative form-group col-md-6 mt-md-3">
+                                    <label for="qui-envoient" class="">Quien envía</label>
+                                    <select name="select" id="qui-envoient" class="form-control mt-2" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group col-md-12 mt-md-3">
+                                    <label for="qui-recibe" class="">Descripción</label>
+                                    <textarea name="" id="inline-editor" name="inline-editor" cols="30" rows="10"></textarea>
+                                </div>
+                                <!-- Drag and drop file upload -->
+                                <div class="position-relative form-group col-md-12 mt-md-3 row">
+                                   <div class="dragdropfile row">
+                                        <div class="drop-zone col-12 col-md-6 col-lg-4">
+                                            <div class="for-DragDrop"></div>
+                                        </div>
+                                        <div class="uploaded-files col-12 col-md-6 col-lg-4">
+                                            <p class="mb-1">Adjuntar archivo (PDF, JPG, PNG)</p>
+                                            <div class="mb-3">
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                        </div>
+                                   </div>
+                                </div>
+                                <div class="position-relative form-group col-md-12 mt-md-5">
+                                    <button class="btn btn-primary-cm btn-pill">Enviar notificación</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header bg-white rounded-2 px-3 d-flex">
+                            <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSearchNotifications" aria-expanded="false" aria-controls="collapseSearchNotifications">
+                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <h5 class="fw-light mb-0 text-muted">Buscar notificaciones</h5>
+                            </button>
+                            <div class="btn-actions-pane-right actions-icon-btn">
+                                <div class="btn-group dropdown">
+                                    <button type="button" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-shadow dropdown-menu-right dropdown-menu-hover-link dropdown-menu">
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            Ocultar
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Resetear</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Imprimir</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Descargar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pb-5 collapse" id="collapseSearchNotifications">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.ckeditor.com/4.20.0/standard-all/ckeditor.js"></script>
+
+{{/ base }}

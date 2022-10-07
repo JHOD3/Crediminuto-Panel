@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "nodemon --exec yarn dev --watch src/pages.js",
-    "dev": "webpack-dev-server --config webpack-dev.config.js",
+    "dev": "webpack-dev-server --config webpack-dev.config.js --hot",
     "pro": "webpack --config webpack-pro.config.js --color --stats-children"
   },
   "keywords": [
@@ -25,6 +25,12 @@
     "@fullcalendar/list": "^5.11.3",
     "@fullcalendar/timegrid": "^5.11.3",
     "@popperjs/core": "^2.11.6",
+    "@transloadit/prettier-bytes": "^0.1.0",
+    "@uppy/drag-drop": "^3.0.1",
+    "@uppy/file-input": "^3.0.1",
+    "@uppy/progress-bar": "^3.0.1",
+    "@uppy/tus": "^3.0.2",
+    "@uppy/xhr-upload": "^3.0.2",
     "animate-sass": "^0.8.2",
     "animate.css": "^4.1.1",
     "apexcharts": "^3.35.5",
@@ -53,6 +59,7 @@
     "datatables.net-responsive": "^2.3.0",
     "datatables.net-responsive-bs5": "^2.3.0",
     "daterangepicker": "^3.1.0",
+    "dropzone": "^6.0.0-beta.2",
     "file-loader": "^6.2.0",
     "flagkit-web": "^0.0.3",
     "gmaps": "^0.4.25",

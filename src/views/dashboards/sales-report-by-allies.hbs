@@ -1,0 +1,170 @@
+{{#> base }}
+    {{> AppSidebar/sidebar-cm dashboards-sales-report=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header bg-white rounded-2 px-3 d-flex">
+                            <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSales" aria-expanded="true" aria-controls="collapseSales">
+                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <h5 class="fw-light mb-0 text-muted">Ventas por Aliado</h5>
+                            </button>
+                            <div class="btn-actions-pane-right actions-icon-btn">
+                                <div class="btn-group dropdown">
+                                    <button type="button" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-shadow dropdown-menu-right dropdown-menu-hover-link dropdown-menu">
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            Ocultar
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Resetear</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Imprimir</span>
+                                        </button>
+                                        <button type="button" tabindex="0" class="dropdown-item">
+                                            <span>Descargar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pb-5 px-3 collapse show" id="collapseSales">
+
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 align-items-end d-flex">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <span class="fs-7 text-primary-cm fw-normal">190</span>
+                                        <span class="mx-3">Total <br> registrados</span>
+                                        <span>
+                                            <button type="button" tabindex="0" class="btn btn-primary-cm btn-pill align-items-center d-flex ms-md-3 btn-icon-none-m">
+                                                <i class="crediminuto icons-slim-download me-md-2"></i>
+                                                <span>Descargar</span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <form action="" class="row col-md-6 col-lg-6 align-items-end d-flex">
+                                    <div class="position-relative form-group col-md-6 mt-md-3 mt-3">
+                                        <label for="name-nit" class="">Nombre / Nit</label>
+                                        <input name="text" id="name-nit" placeholder="Ingresa el nombre" class="form-control mt-2" required>
+                                    </div>
+                                    <div class="position-relative form-group col-md-6 mt-md-3 mt-3">
+                                        <button type="button" class="btn btn-primary-cm btn-pill">Buscar</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="table-responsive mt-md-5 mt-4 pt-2">
+                                <div class="bg-primary-cm p-2 rounded-top">
+                                    <h5 class="fw-light mb-0 text-white">Lista de tiendas</h5>
+                                </div>
+                                <table class="table mt-0 responsive nowrap" id="example" data-page-length='5' style="width:100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Retailer</th>
+                                            <th>Ejecutivo comercial</th>
+                                            <th>Septiembre 2022</th>
+                                            <th>Agosto 2022</th>
+                                            <th>Julio 2022</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>02 TELECOMUNICACIONES SA</td>
+                                            <td>Anny Ramirez</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#MOVILSHOP</td>
+                                            <td>Claudia Patricia Cortina</td>
+                                            <td>$5.720.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                            <td>$5.581.000,00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{{/ base }}

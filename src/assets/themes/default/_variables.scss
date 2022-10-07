@@ -50,7 +50,7 @@ $pink: #f65ca2;
 $red: #d92550;
 $orange: #fd7e14;
 $yellow: #f7b924;
-$green: #3ac47d;
+$green: #27C427;
 $teal: #16E0BD;
 $cyan: #16aaff;
 $blue-light: #eeeeee;
@@ -66,22 +66,56 @@ $dark: $gray-800;
 $focus: $indigo;
 $alt: $purple;
 
+$primary-cm   : #E00520 !default;
+$secondary-cm : #C40018 !default;
+$terciary-cm  : #F5B015 !default;
+$quaternary-cm: #FF9E03 !default;
+$quinary-cm   : #FFF3D9 !default;
+$senary-cm    : #59595B !default;
+$septenary-cm : #F5F5F5 !default;
+$octonary-cm  : #B2B2B2 !default;
+$nonary-cm    : #C4C5C7 !default;
+
+$action-cm-orange   : #FF6200 !default;
+$action-cm-red      : #A70015 !default;
+$action-cm-green-1  : #2C5429 !default;
+$action-cm-green-2  : #16A816 !default;
+$action-cm-green-3  : #26E226 !default;
+$action-cm-cyan-1   : #0099BA !default;
+$action-cm-cyan-2   : #16CBF2 !default;
+
 $theme-colors: ();
 
 $theme-colors: map-merge(
-                (
-                        "primary": $primary,
-                        "secondary": $secondary,
-                        "success": $success,
-                        "info": $info,
-                        "warning": $warning,
-                        "danger": $danger,
-                        "light": $light,
-                        "dark": $dark,
-                        "focus": $focus,
-                        "alternate": $alt
-                ),
-                $theme-colors
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "focus": $focus,
+    "alternate": $alt,
+    "primary-cm"        : $primary-cm,
+    "secondary-cm"      : $secondary-cm,
+    "terciary-cm"       : $terciary-cm,
+    "quaternary-cm"     : $quaternary-cm,
+    "quinary-cm"        : $quinary-cm,
+    "senary-cm"         : $senary-cm,
+    "septenary-cm"      : $septenary-cm,
+    "octonary-cm"       : $octonary-cm,
+    "nonary-cm"         : $nonary-cm,
+    "action-cm-orange"  : $action-cm-orange,
+    "action-cm-red"     : $action-cm-red,
+    "action-cm-green-1" : $action-cm-green-1,
+    "action-cm-green-2" : $action-cm-green-2,
+    "action-cm-cyan-1"  : $action-cm-cyan-1,
+    "action-cm-cyan-2"  : $action-cm-cyan-2,
+    "teal"              : $teal,
+  ),
+  $theme-colors
 );
 
 // BOOTSTRAP OVERWRITES
@@ -126,8 +160,8 @@ $input-group-addon-bg: lighten($dropdown-link-hover-bg, 3%);
 
 // Tables
 
-$table-accent-bg: rgba($black, .03);
-$table-hover-bg: $dropdown-link-hover-bg;
+$table-accent-bg: transparent !default;
+$table-hover-bg: #e005200f !default;
 $table-active-bg: $table-hover-bg;
 $table-border-color: $gray-200;
 $table-head-bg: $gray-100;
@@ -144,8 +178,8 @@ $popover-header-bg: $white;
 
 // Color Modifiers
 
-$link-color: $primary;
-$component-active-bg: $primary;
+$link-color: $gray-700;
+$component-active-bg: $primary-cm;
 $custom-control-indicator-checked-disabled-bg: rgba($primary, .5);
 $form-feedback-valid-color:$green;
 $form-feedback-invalid-color: $red;

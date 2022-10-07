@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center px-3 mb-3 mt-4 d-md-none d-block">
+    {{#each htmlWebpackPlugin.options.list }}
+        {{#if @last}}
+            <h5 class="text-white fw-light">{{this}}</h5>
+        {{else}}
+        {{/if}}
+    {{/each}}
+</div>

@@ -12,10 +12,14 @@
   padding: 5px 10px;
   min-width: 19px;
   background: $white;
-  padding: 1px 3px !important;
-  font-size: 8px !important;
 }
-
+@include media-breakpoint-down(sm) {
+  .badge {
+    position: absolute;
+    margin-top: 4px;
+    right: 10px;
+  }
+}
 .badge-light {
   background: $white;
 }

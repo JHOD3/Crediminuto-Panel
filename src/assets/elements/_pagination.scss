@@ -1,10 +1,26 @@
 // Pagination
 
 .pagination {
+  justify-content: center !important;
   .page-number {
     @extend .page-item;
   }
-
+  li.paginate_button.page-item a {
+    border-left: none;
+    border-right: none;
+  }
+  li.paginate_button.page-item.previous a {
+    border: 1px solid #e2e2e2;
+    border-radius: 7px 0 0 7px;
+  }
+  li.paginate_button.page-item.previous + li a {
+    border-left: 1px solid #e2e2e2;
+    border-radius: 0;
+  }
+  li.paginate_button.page-item.next a {
+    border: 1px solid #e2e2e2;
+    border-radius: 0 7px 7px 0;
+  }
   li {
     a {
       position: relative;

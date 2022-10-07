@@ -183,7 +183,7 @@
 
 .daterangepicker td.available:hover,
 .daterangepicker th.available:hover {
-  background-color: $primary;
+  background-color: $primary-cm;
   border-color: transparent;
   color: $white;
 }
@@ -222,7 +222,7 @@
 
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
-  background-color: $primary;
+  background-color: $primary-cm;
   border-color: transparent;
   color: $white;
   @include border-radius($border-radius);
@@ -342,7 +342,7 @@
 }
 
 .daterangepicker .ranges li.active {
-  background-color: $primary;
+  background-color: $primary-cm;
   color: $white;
 }
 

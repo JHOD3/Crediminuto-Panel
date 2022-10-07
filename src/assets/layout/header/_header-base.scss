@@ -65,6 +65,12 @@
   padding: 0 $layout-spacer-x;
   height: $app-header-height;
   align-items: center;
+  .logo-src {
+    height: $logo-height;
+    width: 200px;
+    background: url('utils/images/logo-cm.png');
+    background-repeat: no-repeat;
+  }
 }
 
 // Header Modifiers

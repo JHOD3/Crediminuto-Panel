@@ -43,7 +43,7 @@ $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
-$green:   #009F6D !default;
+$green:   #27C427 !default;
 $teal:    #00CE8E !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
@@ -322,6 +322,7 @@ $action-cm-red      : #A70015 !default;
 $action-cm-green-1  : #2C5429 !default;
 $action-cm-green-2  : #16A816 !default;
 $action-cm-green-3  : #26E226 !default;
+$action-cm-green-4  : #5FC045 !default;
 $action-cm-cyan-1   : #0099BA !default;
 $action-cm-cyan-2   : #16CBF2 !default;
 // scss-docs-start theme-colors-map
@@ -332,7 +333,7 @@ $theme-colors: (
   "success"           : $success,
   "info"              : $info,
   "warning"           : $warning,
-  "danger"            : $danger,
+  "danger"            : $primary-cm,
   "light"             : $light,
   "dark"              : $dark,
   "primary-cm"        : $primary-cm,
@@ -348,9 +349,12 @@ $theme-colors: (
   "action-cm-red"     : $action-cm-red,
   "action-cm-green-1" : $action-cm-green-1,
   "action-cm-green-2" : $action-cm-green-2,
+  "action-cm-green-3" : $action-cm-green-3,
+  "action-cm-green-4" : $action-cm-green-4,
   "action-cm-cyan-1"  : $action-cm-cyan-1,
   "action-cm-cyan-2"  : $action-cm-cyan-2,
   "teal"              : $teal,
+
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -537,11 +541,11 @@ $border-radius-pill:          50rem !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
-$box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
+$box-shadow-inset:            inset 0 1px 2px transparent !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color:      $white !default;
-$component-active-bg:         $primary !default;
+$component-active-bg:         $primary-cm !default;
 
 // scss-docs-start caret-variables
 $caret-width:                 .3em !default;
@@ -713,7 +717,7 @@ $table-active-bg:             rgba($black, $table-active-bg-factor) !default;
 
 $table-hover-color:           $table-color !default;
 $table-hover-bg-factor:       .075 !default;
-$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-hover-bg:              #e005200f !default;
 
 $table-border-factor:         .1 !default;
 $table-border-width:          $border-width !default;
@@ -739,6 +743,22 @@ $table-variants: (
   "danger":     shift-color($danger, $table-bg-scale),
   "light":      $light,
   "dark":       $dark,
+  "primary-cm"        : $primary-cm,
+  "secondary-cm"      : $secondary-cm,
+  "terciary-cm"       : $terciary-cm,
+  "quaternary-cm"     : $quaternary-cm,
+  "quinary-cm"        : $quinary-cm,
+  "senary-cm"         : $senary-cm,
+  "septenary-cm"      : $septenary-cm,
+  "octonary-cm"       : $octonary-cm,
+  "nonary-cm"         : $nonary-cm,
+  "action-cm-orange"  : $action-cm-orange,
+  "action-cm-red"     : $action-cm-red,
+  "action-cm-green-1" : $action-cm-green-1,
+  "action-cm-green-2" : $action-cm-green-2,
+  "action-cm-cyan-1"  : $action-cm-cyan-1,
+  "action-cm-cyan-2"  : $action-cm-cyan-2,
+  "teal"              : $teal,
 ) !default;
 // scss-docs-end table-loop
 
@@ -748,15 +768,15 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-y:         .475rem !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         14px !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:         .25rem !default;
 $input-btn-focus-color-opacity: .25 !default;
-$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+$input-btn-focus-color:         transparent !default;
 $input-btn-focus-blur:          0 !default;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
@@ -909,7 +929,7 @@ $form-check-input-active-filter:          brightness(90%) !default;
 $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 1px solid rgba($black, .25) !default;
 $form-check-input-border-radius:          .25em !default;
-$form-check-radio-border-radius:          50% !default;
+$form-check-radio-border-radius:          25% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
 $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
@@ -917,7 +937,7 @@ $form-check-input-checked-color:          $component-active-color !default;
 $form-check-input-checked-bg-color:       $component-active-bg !default;
 $form-check-input-checked-border-color:   $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
-$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+$form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
 
 $form-check-input-indeterminate-color:          $component-active-color !default;
 $form-check-input-indeterminate-bg-color:       $component-active-bg !default;
@@ -1045,13 +1065,13 @@ $form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $form-text-font-size !default;
 $form-feedback-font-style:          $form-text-font-style !default;
-$form-feedback-valid-color:         $success !default;
-$form-feedback-invalid-color:       $danger !default;
+$form-feedback-valid-color:         $action-cm-green-4 !default;
+$form-feedback-invalid-color:       $action-cm-orange !default;
 
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
 $form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
-$form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
+$form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='15.268' height='15.268' viewBox='0 0 15.268 15.268'> <g id='Grupo_1048' data-name='Grupo 1048' transform='translate(-427.851 -5616.598)'> <g id='Grupo_1047' data-name='Grupo 1047' transform='translate(-3 0)'> <path id='Trazado_1066' data-name='Trazado 1066' d='M904.869,310.872,893.844,321.9' transform='translate(-460.871 5307.847)' fill='none' stroke='#{$form-feedback-icon-invalid-color}' stroke-linecap='round' stroke-width='3'/> </g> <path id='Trazado_1067' data-name='Trazado 1067' d='M11.024,0,0,11.025' transform='translate(440.998 5618.72) rotate(90)' fill='none' stroke='#{$form-feedback-icon-invalid-color}' stroke-linecap='round' stroke-width='3'/> </g></svg>") !default;
 // scss-docs-end form-feedback-variables
 
 // scss-docs-start form-validation-states
@@ -1237,8 +1257,8 @@ $pagination-focus-bg:               $gray-200 !default;
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-hover-bg:               $gray-200 !default;
+$pagination-hover-color:            $primary-cm !default;
+$pagination-hover-bg:               $white !default;
 $pagination-hover-border-color:     $gray-300 !default;
 
 $pagination-active-color:           $component-active-color !default;
@@ -1267,7 +1287,7 @@ $placeholder-opacity-min:           .2 !default;
 
 // scss-docs-start card-variables
 $card-spacer-y:                     $spacer !default;
-$card-spacer-x:                     $spacer !default;
+$card-spacer-x:                     2.2rem !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
 $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
@@ -1313,7 +1333,7 @@ $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 
 $accordion-icon-width:                    1.25rem !default;
 $accordion-icon-color:                    $accordion-button-color !default;
-$accordion-icon-active-color:             $accordion-button-active-color !default;
+$accordion-icon-active-color:             $primary-cm !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
 $accordion-icon-transform:                rotate(-180deg) !default;
 

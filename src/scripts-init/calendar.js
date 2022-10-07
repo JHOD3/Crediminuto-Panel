@@ -1,6 +1,4 @@
 // Sliders & Carousels
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { Calendar } from '@fullcalendar/core';
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';

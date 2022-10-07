@@ -73,7 +73,7 @@
 
   &-bottom-left,
   &-bottom-right {
-    border-bottom-color: $primary;
+    border-bottom-color: $primary-cm;
 
     &::before,
     &::after {
@@ -83,7 +83,7 @@
     }
 
     &::before {
-      border-top-color: $primary;
+      border-top-color: $primary-cm;
     }
 
     &::after {
@@ -130,7 +130,7 @@
         transition: all .2s;
 
         &:hover {
-          background-color: $primary;
+          background-color: $primary-cm;
           color: $white;
         }
 
@@ -155,7 +155,7 @@
 
         &.picked,
         &.picked:hover {
-          background: $success;
+          background: $primary-cm;
           color: $white;
         }
 

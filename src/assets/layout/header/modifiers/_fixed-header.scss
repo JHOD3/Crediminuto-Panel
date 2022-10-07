@@ -14,7 +14,11 @@
   .app-main {
     padding-top: $app-header-height;
   }
-
+  @include media-breakpoint-down(md) {
+    .app-main {
+      padding-top: 80px;
+    }
+  }
   &:not(.fixed-sidebar):not(.closed-sidebar) {
     .app-sidebar {
       .app-header__logo {

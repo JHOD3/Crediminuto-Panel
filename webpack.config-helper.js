@@ -20,7 +20,7 @@ for (let i = 0; i < pages.length; i++) {
             title: page.content.title,
             heading_icon: page.content.heading_icon,
             description: page.content.description,
-            lista: page.content.lista,
+            list: page.content.list,
         })
     );
 }
@@ -40,6 +40,7 @@ module.exports = (options) => {
             toastr: './src/scripts-init/toastr.js',
             sweet_alerts: './src/scripts-init/sweet-alerts.js',
             scrollbar: './src/scripts-init/scrollbar.js',
+
             sticky_elements: './src/scripts-init/sticky-elements.js',
             carousel_slider: './src/scripts-init/carousel-slider.js',
             fullcalendar: './src/scripts-init/calendar.js',
@@ -78,9 +79,6 @@ module.exports = (options) => {
                 Popper: ['popper.js', 'default'],
             }),
             new ESLintPlugin(),
-            new MiniCssExtractPlugin({
-                filename: './assets/styles/[name].css',
-            }),
             new CleanWebpackPlugin({
                 cleanAfterEveryBuildPatterns: dest
             }),
@@ -138,6 +136,12 @@ module.exports = (options) => {
             './src/scripts-init/demo.js',
         ];
 
+        webpackConfig.plugins.push(
+            new MiniCssExtractPlugin({
+                filename: './assets/styles/[name].css',
+            }),
+        );
+
         webpackConfig.module.rules.push({
             test: /\.scss$/i,
             use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ] ,
@@ -152,11 +156,14 @@ module.exports = (options) => {
             new Webpack.HotModuleReplacementPlugin()
         );
 
+
         webpackConfig.module.rules.push({
             test: /\.scss$/i,
-            use: ['style-loader', 'css-loader', 'sass-loader']
+            exclude: /node_modules\/bootstrap\/*.scss$/i,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
         }, {
             test: /\.css$/i,
+            exclude: /node_modules\/bootstrap\/*.css$/i,
             use: ['style-loader', 'css-loader']
         });
 
@@ -165,8 +172,7 @@ module.exports = (options) => {
             static: {
                 directory: dest,
             },
-            compress: options.isProduction,
-            hot: !options.isProduction
+            compress: options.isProduction
         };
 
         webpackConfig.plugins.push(
