@@ -1,6 +1,6 @@
 const pages = [
     {
-        output: './index.html',
+        output: '../index.html',
         content: {
             title: 'UI Kit',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc elit aliquet nisl.',
@@ -10,7 +10,7 @@ const pages = [
         template: './src/views/dashboards/ui-kits.hbs',
     },
     {
-        output: './panel.html',
+        output: '../panel.html',
         content: {
             title: 'Panel de control',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc elit aliquet nisl.',
@@ -20,7 +20,7 @@ const pages = [
         template: './src/views/dashboards/panel.hbs',
     },
     {
-        output: './search-request.html',
+        output: '../search-request.html',
         content: {
             title: 'Buscar solicitud',
             description: 'This is an example dashboard created using build-in elements and components.',
@@ -30,7 +30,7 @@ const pages = [
         template: './src/views/dashboards/search-request.hbs'
     },
     {
-        output: './user-info.html',
+        output: '../user-info.html',
         content: {
             title: 'Información de usuario',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -40,7 +40,7 @@ const pages = [
         template: './src/views/dashboards/user-info.hbs'
     },
     {
-        output: './create-notifications.html',
+        output: '../create-notifications.html',
         content: {
             title: 'Información de usuario',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -50,7 +50,7 @@ const pages = [
         template: './src/views/dashboards/create-notifications.hbs'
     },
     {
-        output: './create-notifications-2.html',
+        output: '../create-notifications-2.html',
         content: {
             title: 'Información de usuario',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -60,7 +60,7 @@ const pages = [
         template: './src/views/dashboards/create-notifications-2.hbs'
     },
     {
-        output: './retailers.html',
+        output: '../retailers.html',
         content: {
             title: 'Información de usuario',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -70,7 +70,7 @@ const pages = [
         template: './src/views/dashboards/retailers.hbs'
     },
     {
-        output: './sales-report-by-allies.html',
+        output: '../sales-report-by-allies.html',
         content: {
             title: 'Reportes ventas por Aliado',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -80,7 +80,7 @@ const pages = [
         template: './src/views/dashboards/sales-report-by-allies.hbs'
     },
     {
-        output: './default-loans.html',
+        output: '../default-loans.html',
         content: {
             title: 'Reportes ventas por Aliado',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -90,7 +90,7 @@ const pages = [
         template: './src/views/dashboards/default-loans.hbs'
     },
     {
-        output: './mulberry-collect.html',
+        output: '../mulberry-collect.html',
         content: {
             title: 'Reportes ventas por Aliado',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
@@ -100,7 +100,7 @@ const pages = [
         template: './src/views/dashboards/mulberry-collect.hbs'
     },
     {
-        output: './login.html',
+        output: '../login.html',
         content: {
             title: 'Reportes ventas por Aliado',
             description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',

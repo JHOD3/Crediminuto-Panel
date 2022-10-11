@@ -26,7 +26,7 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 module.exports = (options) => {
-    const dest = Path.join(__dirname, 'cm-panel');
+    const dest = Path.join(__dirname, 'cm-panel/dist');
     let webpackConfig = {
         mode: 'none',
         devtool: options.devtool,
@@ -132,10 +132,7 @@ module.exports = (options) => {
     };
 
     if (options.isProduction) {
-        webpackConfig.entry = [
-            './src/app.js',
-            './src/scripts-init/demo.js',
-        ];
+
 
         webpackConfig.plugins.push(
             new MiniCssExtractPlugin({
