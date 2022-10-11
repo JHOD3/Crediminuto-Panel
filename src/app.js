@@ -1,14 +1,10 @@
 import $ from "jquery";
-import 'bootstrap';
+import * as bootstrap from 'bootstrap';
 import 'metismenu';
-import 'ckeditor';
 import Uppy from '@uppy/core';
 import DragDrop from '@uppy/drag-drop';
-import FileInput from '@uppy/file-input'
-import ProgressBar from '@uppy/progress-bar';
-import prettierBytes from '@transloadit/prettier-bytes';
-
-
+import 'prismjs/prism';
+window.bootstrap = bootstrap;
 import "./assets/base.scss";
 
 
@@ -84,6 +80,7 @@ $('.dragdropfile').on('click', '.deleteFile', function(e){
     $(this).parent().remove();
 });
 
+
 $(document).ready(() => {
     // Sidebar Menu
     $('.dropdown-toggle').dropdown();
@@ -92,11 +89,28 @@ $(document).ready(() => {
     }, 100);
     // CKEditor
     if (typeof CKEDITOR !== 'undefined') {
+        CKEDITOR.editorConfig = function( config ) {
+            config.toolbar = [
+                { name: 'document', items: [ ] },
+                { name: 'clipboard', items: [ 'clipboard', 'undo' ] },
+                { name: 'editing', items: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+                { name: 'forms', items: [ 'Form' ] },
+                { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike' ] },
+                { name: 'paragraph', items: [ ] },
+                { name: 'links', items: [ 'Link' ] },
+                { name: 'insert', items: [ 'Image',  'Table' ] },
+                { name: 'styles', items: [ 'Font', 'FontSize' ] },
+                { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+                { name: 'tools', items: [  ] },
+                { name: 'about', items: [ ] }
+            ];
+        };
         CKEDITOR.replace('inline-editor', {
             width: '100%',
             height: 250,
             removeButtons: 'PasteFromWord'
         });
+
     }
     // Uppy
 

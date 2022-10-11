@@ -2,6 +2,16 @@ const pages = [
     {
         output: './index.html',
         content: {
+            title: 'UI Kit',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc elit aliquet nisl.',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit',
+            list: ['UI Kits'],
+        },
+        template: './src/views/dashboards/ui-kits.hbs',
+    },
+    {
+        output: './panel.html',
+        content: {
             title: 'Panel de control',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc elit aliquet nisl.',
             heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit',
@@ -88,6 +98,16 @@ const pages = [
             list: ['Gestión de cobranzas','Préstamos en Mora'],
         },
         template: './src/views/dashboards/mulberry-collect.hbs'
+    },
+    {
+        output: './login.html',
+        content: {
+            title: 'Reportes ventas por Aliado',
+            description: 'Esta es una página de ejemplo creada usando elementos y componentes integrados.',
+            heading_icon: 'pe-7s-car icon-gradient bg-mean-fruit',
+            list: ['Gestión de cobranzas','Préstamos en Mora'],
+        },
+        template: './src/views/dashboards/login.hbs'
     },
 ];
 

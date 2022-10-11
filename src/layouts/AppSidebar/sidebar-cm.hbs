@@ -37,12 +37,15 @@
                     </div>
                 </li>
                 <li
-                    {{#if dashboards-home}} class="mm-active"{{/if}}
+                    {{#if dashboards-panel}} class="mm-active"{{/if}}
                     {{#if dashboards-search-request}} class="mm-active"{{/if}}
-                    {{#if dashboards-sales}} class="mm-active"{{/if}}
-                    {{#if dashboards-crm}} class="mm-active"{{/if}}
-                    {{#if dashboards-minimal-1}} class="mm-active"{{/if}}
-                    {{#if dashboards-minimal-2}} class="mm-active"{{/if}}
+                    {{#if dashboards-user-info}} class="mm-active"{{/if}}
+                    {{#if dashboards-create-notifications}} class="mm-active"{{/if}}
+                    {{#if dashboards-create-notifications-2}} class="mm-active"{{/if}}
+                    {{#if dashboards-mulberry-collect}} class="mm-active"{{/if}}
+                    {{#if dashboards-retailers}} class="mm-active"{{/if}}
+                    {{#if dashboards-default-loans}} class="mm-active"{{/if}}
+                    {{#if dashboards-sales-report}} class="mm-active"{{/if}}
                 >
                     <a href="#">
                         <i class="metismenu-icon crediminuto icons-slim-home"></i>
@@ -50,15 +53,24 @@
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul
-                        {{#if dashboards-home}} class="mm-show"{{/if}}
+                        {{#if dashboards-panel}} class="mm-show"{{/if}}
                         {{#if dashboards-search-request}} class="mm-show"{{/if}}
-                        {{#if dashboards-sales}} class="mm-show"{{/if}}
-                        {{#if dashboards-crm}} class="mm-show"{{/if}}
-                        {{#if dashboards-minimal-1}} class="mm-show"{{/if}}
-                        {{#if dashboards-minimal-2}} class="mm-show"{{/if}}
+                        {{#if dashboards-user-info}} class="mm-show"{{/if}}
+                        {{#if dashboards-create-notifications}} class="mm-show"{{/if}}
+                        {{#if dashboards-create-notifications-2}} class="mm-show"{{/if}}
+                        {{#if dashboards-mulberry-collect}} class="mm-show"{{/if}}
+                        {{#if dashboards-retailers}} class="mm-show"{{/if}}
+                        {{#if dashboards-default-loans}} class="mm-show"{{/if}}
+                        {{#if dashboards-sales-report}} class="mm-show"{{/if}}
                     >
                         <li>
-                            <a href="index.html"{{#if dashboards-home}} class="mm-active"{{/if}}>
+                            <a href="index.html"{{#if dashboards-ui-kit}} class="mm-active"{{/if}}>
+                                <i class="metismenu-icon">
+                                </i>UI Kits
+                            </a>
+                        </li>
+                        <li>
+                            <a href="panel.html"{{#if dashboards-panel}} class="mm-active"{{/if}}>
                                 <i class="metismenu-icon">
                                 </i>Dashboard
                             </a>
@@ -70,54 +82,46 @@
                             </a>
                         </li>
                         <li>
-                            <a href="index.html"{{#if dashboards-analytics}} class="mm-active"{{/if}}>
+                            <a href="user-info.html"{{#if dashboards-user-info}} class="mm-active"{{/if}}>
                                 <i class="metismenu-icon">
-                                </i>Analytics
+                                </i>Usuario
                             </a>
                         </li>
                         <li>
-                            <a href="dashboards-commerce.html"{{#if dashboards-commerce}} class="mm-active"{{/if}}>
+                            <a href="create-notifications.html"{{#if dashboards-create-notifications}} class="mm-active"{{/if}}>
                                 <i class="metismenu-icon">
-                                </i>Commerce
+                                </i>Notificaciones clientes
                             </a>
                         </li>
                         <li>
-                            <a href="dashboards-sales.html"{{#if dashboards-sales}} class="mm-active"{{/if}}>
+                            <a href="create-notifications-2.html"{{#if dashboards-create-notifications-2}} class="mm-active"{{/if}}>
                                 <i class="metismenu-icon">
-                                </i>Sales
+                                </i>Notificaciones clientes 2
                             </a>
-                        </li>
-                        <li
-                            {{#if dashboards-minimal-1}} class="mm-active"{{/if}}
-                            {{#if dashboards-minimal-2}} class="mm-active"{{/if}}
-                        >
-                            <a href="#">
-                                <i class="metismenu-icon"></i>
-                                Minimal
-                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                            </a>
-                            <ul
-                                {{#if dashboards-minimal-1}} class="mm-show"{{/if}}
-                                {{#if dashboards-minimal-2}} class="mm-show"{{/if}}
-                            >
-                                <li>
-                                    <a href="dashboards-minimal-1.html"{{#if dashboards-minimal-1}} class="mm-active"{{/if}}>
-                                        <i class="metismenu-icon">
-                                        </i>Variation 1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="dashboards-minimal-2.html"{{#if dashboards-minimal-2}} class="mm-active"{{/if}}>
-                                        <i class="metismenu-icon">
-                                        </i>Variation 2
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li>
-                            <a href="dashboards-crm.html"{{#if dashboards-crm}} class="mm-active"{{/if}}>
-                                <i class="metismenu-icon"></i>
-                                CRM
+                            <a href="retailers.html"{{#if dashboards-retailers}} class="mm-active"{{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Retailers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="default-loans.html"{{#if dashboards-default-loans}} class="mm-active"{{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Préstamos en Mora
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mulberry-collect.html"{{#if dashboards-mulberry-collect}} class="mm-active"{{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Mora Temprana-cobrador
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sales-report-by-allies.html"{{#if dashboards-sales-report}} class="mm-active"{{/if}}>
+                                <i class="metismenu-icon">
+                                </i>Reportes Vtas. Por Aliado
                             </a>
                         </li>
                     </ul>
@@ -216,7 +220,6 @@
                         </li>
                     </ul>
                 </li>
-                <li class="app-sidebar__heading">UI Components</li>
                 <li
                     {{#if elements-buttons-standard}} class="mm-active"{{/if}}
                     {{#if elements-buttons-pills}} class="mm-active"{{/if}}

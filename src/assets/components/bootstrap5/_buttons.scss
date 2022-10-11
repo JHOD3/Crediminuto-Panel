@@ -134,7 +134,7 @@
         $active-border: tint-color($value, $btn-active-border-tint-amount)
       );
     } @else {
-      @include button-variant($value, $value);
+      //@include button-variant($value, $value);
     }
   }
 }

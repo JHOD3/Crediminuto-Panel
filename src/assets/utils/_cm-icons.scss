@@ -25,6 +25,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 .icons-eyedropper:before {
   content: "\e910";
 }
@@ -285,6 +287,21 @@
 }
 .icons-winsows:before {
   content: "\e970";
+}
+.icons-slim-bell-2:before {
+  content: "\e976";
+}
+.icons-slim-start:before {
+  content: "\e979";
+}
+.icons-slim-clock:before {
+  content: "\e973";
+}
+.icons-slim-eye:before {
+  content: "\e974";
+}
+.icons-slim-file-check:before {
+  content: "\e975";
 }
 .icons-slim-clip:before {
   content: "\e972";

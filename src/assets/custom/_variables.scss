@@ -63,7 +63,7 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-dark":  $gray-800,
 ) !default;
 // scss-docs-end colors-map
 
@@ -313,9 +313,9 @@ $terciary-cm  : #F5B015 !default;
 $quaternary-cm: #FF9E03 !default;
 $quinary-cm   : #FFF3D9 !default;
 $senary-cm    : #59595B !default;
-$septenary-cm : #F5F5F5 !default;
-$octonary-cm  : #B2B2B2 !default;
-$nonary-cm    : #C4C5C7 !default;
+$septenary-cm : #B2B2B2 !default;
+$octonary-cm  : #C4C5C7 !default;
+//$nonary-cm    : #C4C5C7 !default;
 
 $action-cm-orange   : #FF6200 !default;
 $action-cm-red      : #A70015 !default;
@@ -326,6 +326,38 @@ $action-cm-green-4  : #5FC045 !default;
 $action-cm-cyan-1   : #0099BA !default;
 $action-cm-cyan-2   : #16CBF2 !default;
 // scss-docs-start theme-colors-map
+//
+// Alert colors
+$warning-cm : #C37800 !default;
+$danger-cm  : #C40018 !default;
+$success-cm : #16A816 !default;
+$info-cm    : #0099BA !default;
+
+// Pill badge colors
+
+$badge-pill-creada-1: #2C5429 !default;
+$badge-pill-creada-2: #2C54292D !default;
+
+$badge-pill-aprovada-1: #16A816 !default;
+$badge-pill-aprovada-2: #16A8162D !default;
+
+$badge-pill-otorgada-1: #26E226 !default;
+$badge-pill-otorgada-2: #26E2262D !default;
+
+$badge-pill-finalizada-1: #FF9E03 !default;
+$badge-pill-finalizada-2: #FF9E032D !default;
+
+$badge-pill-cancelada-1: #A70015 !default;
+$badge-pill-cancelada-2: #A700152D !default;
+
+$badge-pill-rechazada-1: #FF6200 !default;
+$badge-pill-rechazada-2: #FF62002D !default;
+
+$badge-pill-en-banco-1: #0099BA !default;
+$badge-pill-en-banco-2: #0099BA2D !default;
+
+$badge-pill-default-1: #C4C5C7 !default;
+$badge-pill-default-2: #C4C5C72D !default;
 
 $theme-colors: (
   "primary"           : $primary,
@@ -344,7 +376,6 @@ $theme-colors: (
   "senary-cm"         : $senary-cm,
   "septenary-cm"      : $septenary-cm,
   "octonary-cm"       : $octonary-cm,
-  "nonary-cm"         : $nonary-cm,
   "action-cm-orange"  : $action-cm-orange,
   "action-cm-red"     : $action-cm-red,
   "action-cm-green-1" : $action-cm-green-1,
@@ -354,7 +385,26 @@ $theme-colors: (
   "action-cm-cyan-1"  : $action-cm-cyan-1,
   "action-cm-cyan-2"  : $action-cm-cyan-2,
   "teal"              : $teal,
-
+  "warning-cm" : $warning-cm,
+  "danger-cm"  : $danger-cm,
+  "success-cm" : $success-cm,
+  "info-cm"    : $info-cm,
+  "badge-pill-creada-1" : $badge-pill-creada-1,
+  "badge-pill-creada-2" : $badge-pill-creada-2,
+  "badge-pill-aprovada-1" : $badge-pill-aprovada-1,
+  "badge-pill-aprovada-2" : $badge-pill-aprovada-2,
+  "badge-pill-otorgada-1" : $badge-pill-otorgada-1,
+  "badge-pill-otorgada-2" : $badge-pill-otorgada-2,
+  "badge-pill-finalizada-1" : $badge-pill-finalizada-1,
+  "badge-pill-finalizada-2" : $badge-pill-finalizada-2,
+  "badge-pill-cancelada-1" : $badge-pill-cancelada-1,
+  "badge-pill-cancelada-2" : $badge-pill-cancelada-2,
+  "badge-pill-rechazada-1" : $badge-pill-rechazada-1,
+  "badge-pill-rechazada-2" : $badge-pill-rechazada-2,
+  "badge-pill-en-banco-1" : $badge-pill-en-banco-1,
+  "badge-pill-en-banco-2" : $badge-pill-en-banco-2,
+  "badge-pill-default-1" : $badge-pill-default-1,
+  "badge-pill-default-2" : $badge-pill-default-2
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -446,8 +496,8 @@ $body-text-align:           null !default;
 $link-color:                              $primary !default;
 $link-decoration:                         underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
-$link-hover-decoration:                   null !default;
+$link-hover-color:                        $primary-cm !default;
+$link-hover-decoration:                   underline !default;
 
 $stretched-link-pseudo-element:           after !default;
 $stretched-link-z-index:                  1 !default;
@@ -751,14 +801,19 @@ $table-variants: (
   "senary-cm"         : $senary-cm,
   "septenary-cm"      : $septenary-cm,
   "octonary-cm"       : $octonary-cm,
-  "nonary-cm"         : $nonary-cm,
   "action-cm-orange"  : $action-cm-orange,
   "action-cm-red"     : $action-cm-red,
   "action-cm-green-1" : $action-cm-green-1,
   "action-cm-green-2" : $action-cm-green-2,
+  "action-cm-green-3" : $action-cm-green-3,
+  "action-cm-green-4" : $action-cm-green-4,
   "action-cm-cyan-1"  : $action-cm-cyan-1,
   "action-cm-cyan-2"  : $action-cm-cyan-2,
   "teal"              : $teal,
+  "warning-cm" : $warning-cm,
+  "danger-cm"  : $danger-cm,
+  "success-cm" : $success-cm,
+  "info-cm"    : $info-cm
 ) !default;
 // scss-docs-end table-loop
 
@@ -892,7 +947,7 @@ $input-border-radius-sm:                $border-radius-sm !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              tint-color($component-active-bg, 50%) !default;
+$input-focus-border-color:              $gray-400 !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;

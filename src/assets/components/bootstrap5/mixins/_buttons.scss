@@ -30,8 +30,8 @@
   --#{$prefix}btn-active-border-color: #{$active-border};
   --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
   --#{$prefix}btn-disabled-color: #{$disabled-color};
-  --#{$prefix}btn-disabled-bg: #{$disabled-background};
-  --#{$prefix}btn-disabled-border-color: #{$disabled-border};
+  --#{$prefix}btn-disabled-bg: #{$gray-600};
+  --#{$prefix}btn-disabled-border-color: #{$gray-600};
 }
 // scss-docs-end btn-variant-mixin
 

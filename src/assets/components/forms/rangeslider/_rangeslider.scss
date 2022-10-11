@@ -129,7 +129,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .noUi-connect {
-  background: $primary;
+  background: $primary-cm;
 }
 
 /* Handles and cursors;
@@ -143,17 +143,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 }
 
 .noUi-handle {
-  border: 2px solid $primary;
+  border: 2px solid $primary-cm;
   @include border-radius(100%);
-  background: $white;
+  background: $primary-cm;
   cursor: default;
   transition: box-shadow 200ms;
 }
 
 .noUi-active {
-  border-color: darken($primary, 15%);
-  box-shadow: 0 0.46875rem 2.1875rem rgba($primary, .8),
-  0 0.125rem 0.5875rem rgba($primary, .9);
+  border-color: darken($primary-cm, 15%);
+  box-shadow: 0 0.46875rem 2.1875rem rgba($primary-cm, .8),
+  0 0.125rem 0.5875rem rgba($primary-cm, .9);
 }
 
 /* Handle stripes;

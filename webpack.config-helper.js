@@ -32,6 +32,7 @@ module.exports = (options) => {
         devtool: options.devtool,
         entry: {
             main: './src/app.js',
+            uikit: './src/scripts-init/uikit.js',
             demo: './src/scripts-init/demo.js',
             ladda: './src/scripts-init/ladda-loading.js',
             blockui: './src/scripts-init/blockui.js',

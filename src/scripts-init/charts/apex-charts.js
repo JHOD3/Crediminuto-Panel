@@ -2200,22 +2200,23 @@ var sparklinesBigPrimary = {
     plotOptions: {
         bar: {
             horizontal: false,
+            endingShape: 'rounded',
+            borderRadius: 5,
+
         },
 
     },
-    colors: ['#007bff', '#16aaff'],
+    colors: ['#E00520'],
     stroke: {
         width: 0,
         colors: ['#fff'],
-        curve: 'smooth'
+        curve: 'smooth',
+
     },
     series: [{
         name: 'Marine',
-        data: [44, 55, 41, 37, 22, 43]
-    }, {
-        name: 'Striking',
-        data: [53, 32, 33, 52, 13, 43]
-    },],
+        data: [20, 25, 21, 27, 12, 5]
+    }],
     tooltip: {
         y: {
             formatter: function (val) {
@@ -2231,7 +2232,7 @@ var sparklinesBigPrimary = {
     legend: {
         position: 'bottom',
         horizontalAlign: 'center',
-    }
+    },
 };
 
 var dashSparkLinesTrans2 = {

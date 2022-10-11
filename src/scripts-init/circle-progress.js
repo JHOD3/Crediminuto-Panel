@@ -66,11 +66,15 @@ $(document).ready(() => {
 
     $('.circle-progress-warning').circleProgress({
         value: 0.23,
-        size: 52,
+        size: 100,
         lineCap: 'round',
-        fill: {color: '#fd7e14'}
+        width: 20,
+        fill: {
+            color: '#fd7e14',
+        }
 
     }).on('circle-animation-progress', function (event, progress, stepValue) {
+        $(this).find('canvas').addClass('mx-auto');
         $(this).find('small').html('<span>' + stepValue.toFixed(2).substr(2) + '%<span>');
     });
 
@@ -88,6 +92,7 @@ $(document).ready(() => {
         value: 0.51,
         size: 114,
         lineCap: 'round',
+
         fill: {gradient: ['#fdb83a', '#fd7e14']}
 
     }).on('circle-animation-progress', function (event, progress, stepValue) {
