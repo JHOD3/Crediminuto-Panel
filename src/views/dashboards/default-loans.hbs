@@ -5,10 +5,10 @@
         <div class="app-main__inner">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-xl-12">
-                    <div class="main-card mb-3 card">
+                    <div class="mb-3 card">
                         <div class="card-header bg-white rounded-2 px-3">
                             <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <img width="20" class="me-2 arrow" src="dist/assets/images/arrow.png" alt="">
                                 <h5 class="fw-light mb-0 text-muted">Buscar</h5>
                             </button>
                         </div>
@@ -95,12 +95,14 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-xl-12">
                     <div class="main-card mb-3 card">
                         <div class="card-header bg-white rounded-2 px-3 d-flex">
                             <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSales" aria-expanded="true" aria-controls="collapseSales">
-                                <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
+                                <img width="20" class="me-2 arrow" src="dist/assets/images/arrow.png" alt="">
                                 <h5 class="fw-light mb-0 text-muted">Ventas por Aliado</h5>
                             </button>
                             <div class="btn-actions-pane-right actions-icon-btn">
@@ -125,8 +127,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body pb-5 px-3 collapse show" id="collapseSales">
 
+                        <div class="card-body pb-5 px-3 collapse show" id="collapseSales">
                             <div class="row">
                                 <div class="col-md-4 col-lg-3 align-items-end d-flex">
                                     <div class="d-flex justify-content-start align-items-center">
@@ -154,7 +156,7 @@
                                 <div class="bg-primary-cm p-2 rounded-top">
                                     <h5 class="fw-light mb-0 text-white">Lista de tiendas</h5>
                                 </div>
-                                <table class="table mt-0 responsive nowrap" id="example" data-page-length='5' style="width:100%">
+                                <table class="table mt-0 responsive" id="example" data-page-length='5' style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>Nombre</th>
@@ -164,7 +166,6 @@
                                             <th>Frecuencia</th>
                                             <th>Cobrador</th>
                                             <th>Status</th>
-
                                             <th>cedula</th>
                                             <th>Telefonos adicionales</th>
                                             <th>Deuda actual</th>
@@ -351,386 +352,7 @@
                                             <td>354136761622657</td>
                                             <td>NO</td>
                                         </tr>
-                                        <tr class="table-active">{{#> base }}
-                                            {{> AppSidebar/sidebar-cm dashboards-search-request=this }}
-                                            <div class="app-main__outer">
-                                                <div class="app-main__inner">
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-md-12 col-xl-12">
-                                                            <div class="main-card mb-3 card">
-                                                                <div class="card-header bg-white rounded-2 px-3">
-                                                                    <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                                                        <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
-                                                                        <h5 class="fw-light mb-0 text-muted">Buscar</h5>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="card-body pb-5" id="collapseExample">
-                                                                    <form action="" class="row g-3 needs-validation" novalidate>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="exampleEmail" class="">Nombre / Apellido / Cédula / Email / Device tag</label>
-                                                                            <input name="text" id="exampleEmail" placeholder="Ingresa un dato personal" class="form-control mt-2" required>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="exampleEmail" class="">Cobrador</label>
-                                                                            <input name="text" id="exampleEmail" placeholder="Ingresa el nombre" class="form-control mt-2" required>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="status" class="">Tipo de producto</label>
-                                                                            <select name="select" id="status" class="form-select mt-2" required>
-                                                                                <option value="" disabled selected>Selecciona una opción</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="exampleEmail" class="">Fecha de otorgamiento</label>
-                                                                            <div class="row">
-                                                                                <div class="col-md-6 col-12">
-                                                                                    <input type="text" class="form-control mt-2" required placeholder="Desde" data-toggle="datepicker-year">
-                                                                                </div>
-                                                                                <div class="col-md-6 col-12">
-                                                                                    <input type="text" class="form-control mt-2" required placeholder="Hasta" data-toggle="datepicker-year">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="status" class="">Retailer</label>
-                                                                            <select name="select" id="status" class="form-select mt-2" required>
-                                                                                <option value="" disabled selected>Selecciona una opción</option>
-                                                                                <option>1</option>
-                                                                                <option>2</option>
-                                                                                <option>3</option>
-                                                                                <option>4</option>
-                                                                                <option>5</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="exampleEmail" class="">Últimos días de contacto</label>
-                                                                            <div class="row">
-                                                                                <div class="col-md-6 col-12">
-                                                                                    <input type="text" class="form-control mt-2" required placeholder="Desde" data-toggle="datepicker-year">
-                                                                                </div>
-                                                                                <div class="col-md-6 col-12">
-                                                                                    <input type="text" class="form-control mt-2" required placeholder="Hasta" data-toggle="datepicker-year">
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="exampleEmail" class="">Condición del cliente</label>
-                                                                            <input name="text" id="exampleEmail" placeholder="Ingresa el número" class="form-control mt-2" required>
-                                                                        </div>
-
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <label for="">Compromiso</label>
-                                                                            <div class="d-flex align-items-center mt-2">
-                                                                                <div class="position-relative form-check">
-                                                                                    <label class="form-check-label" for="call-1">
-                                                                                        <input type="radio" name="call" id="call-1" class="form-check-input"> Activo
-                                                                                    </label>
-                                                                                </div>
-                                                                                <div class="position-relative form-check ms-4">
-                                                                                    <label class="form-check-label" for="call-2">
-                                                                                        <input type="radio" name="call" id="call-2" class="form-check-input"> No
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="position-relative form-group col-md-6 mt-md-3">
-                                                                            <button class="mt-1 btn btn-primary-cm btn-pill rounded-4">BUSCAR</button>
-                                                                            <button class="mt-1 ms-3 btn btn-outline-primary-cm btn-pill rounded-4">REFRESH</button>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-12 col-md-12 col-xl-12">
-                                                            <div class="main-card mb-3 card">
-                                                                <div class="card-header bg-white rounded-2 px-3 d-flex">
-                                                                    <button type="button" tabindex="0" class="dropdown-item collapse-button d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSales" aria-expanded="true" aria-controls="collapseSales">
-                                                                        <img width="20" class="me-2 arrow" src="assets/images/arrow.png" alt="">
-                                                                        <h5 class="fw-light mb-0 text-muted">Ventas por Aliado</h5>
-                                                                    </button>
-                                                                    <div class="btn-actions-pane-right actions-icon-btn">
-                                                                        <div class="btn-group dropdown">
-                                                                            <button type="button" aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false" class="btn-icon btn-icon-only btn btn-link">
-                                                                                <i class="fas fa-ellipsis-v"></i>
-                                                                            </button>
-                                                                            <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu-shadow dropdown-menu-right dropdown-menu-hover-link dropdown-menu">
-                                                                                <button type="button" tabindex="0" class="dropdown-item">
-                                                                                    Ocultar
-                                                                                </button>
-                                                                                <button type="button" tabindex="0" class="dropdown-item">
-                                                                                    <span>Resetear</span>
-                                                                                </button>
-                                                                                <button type="button" tabindex="0" class="dropdown-item">
-                                                                                    <span>Imprimir</span>
-                                                                                </button>
-                                                                                <button type="button" tabindex="0" class="dropdown-item">
-                                                                                    <span>Descargar</span>
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="card-body pb-5 px-3 collapse show" id="collapseSales">
-
-                                                                    <div class="row">
-                                                                        <div class="col-md-4 col-lg-3 align-items-end d-flex">
-                                                                            <div class="d-flex justify-content-start align-items-center">
-                                                                                <span class="fs-7 text-primary-cm fw-normal">190</span>
-                                                                                <span class="mx-3">Total <br> registrados</span>
-                                                                                <span>
-                                            <button type="button" tabindex="0" class="btn btn-primary-cm btn-pill align-items-center d-flex ms-md-3 btn-icon-none-m">
-                                                <i class="crediminuto icons-slim-download me-md-2"></i>
-                                                <span>Descargar</span>
-                                            </button>
-                                        </span>
-                                                                            </div>
-                                                                        </div>
-                                                                        <form action="" class="row col-md-6 col-lg-6 align-items-end d-flex ps-lg-5">
-                                                                            <div class="position-relative form-group col-md-6 mt-md-3 mt-3">
-                                                                                <label for="name-nit" class="">Nombre / Nit</label>
-                                                                                <input name="text" id="name-nit" placeholder="Ingresa el nombre" class="form-control mt-2" required>
-                                                                            </div>
-                                                                            <div class="position-relative form-group col-md-6 mt-md-3 mt-3">
-                                                                                <button type="button" class="btn btn-primary-cm btn-pill">Buscar</button>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
-                                                                    <div class="table-responsive mt-md-5 mt-4 pt-2">
-                                                                        <div class="bg-primary-cm p-2 rounded-top">
-                                                                            <h5 class="fw-light mb-0 text-white">Lista de tiendas</h5>
-                                                                        </div>
-                                                                        <table class="table mt-0 responsive nowrap" id="example" data-page-length='5' style="width:100%">
-                                                                            <thead>
-                                                                            <tr>
-                                                                                <th>Nombre</th>
-                                                                                <th>Cédula</th>
-                                                                                <th>Tipo Prestamo</th>
-                                                                                <th>Crédito</th>
-                                                                                <th>Frecuencia</th>
-                                                                                <th>Cobrador</th>
-                                                                                <th>Status</th>
-
-                                                                                <th>cedula</th>
-                                                                                <th>Telefonos adicionales</th>
-                                                                                <th>Deuda actual</th>
-                                                                                <th>Condición</th>
-                                                                                <th>MDM</th>
-                                                                                <th>IMEI</th>
-                                                                                <th>COMPROMISO</th>
-                                                                            </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            <tr class="table-active">
-                                                                                <td>Yesid Alfonso Moreno Sandoval</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>SAMSUNG_APP</td>
-                                                                                <td>1</td>
-                                                                                <td>MENSUAL</td>
-                                                                                <td>Cristofer Rodriguez</td>
-                                                                                <td>LOCKED</td>
-                                                                                <td>123456789</td>
-                                                                                <td>1019037123</td>
-                                                                                <td>$5.720.000,00</td>
-                                                                                <td>En Negociación</td>
-                                                                                <td>Samsung</td>
-                                                                                <td>354136761622657</td>
-                                                                                <td>NO</td>
-                                                                            </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        {{/ base }}
+                                        <tr class="table-active">
                                             <td>Yesid Alfonso Moreno Sandoval</td>
                                             <td>$5.720.000,00</td>
                                             <td>SAMSUNG_APP</td>
@@ -753,7 +375,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

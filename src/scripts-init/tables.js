@@ -12,14 +12,23 @@ $(document).ready(() => {
     setTimeout(function () {
 
         $('#example').DataTable({
-            responsive: true,
+            responsive: {
+                details: {
+                    type: 'column'
+                }
+            },
             searching: false,
             pageLength: 5,
             lengthChange: false,
             info: false,
             dom: '<"row view-filter"<"col-sm-12"<"pull-left"l><"pull-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
             columnDefs: [
-                {"width": "15%", "targets": 0, "orderable": false},
+                {
+                    'className': 'dtr-control',
+                    "width": "15%",
+                    "targets": 0,
+                    "orderable": false
+                },
             ],
             language: {
                 paginate: {
@@ -29,22 +38,27 @@ $(document).ready(() => {
             }
         });
         $('#example3').DataTable({
-            responsive: true,
+            responsive: {
+                details: {
+                    type: 'column'
+                }
+            },
             searching: false,
             pageLength: 5,
             lengthChange: false,
             info: false,
             dom: '<"row view-filter"<"col-sm-12"<"pull-left"l><"pull-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
-            columnDefs: [
-                {"width": "15%", "targets": 0, "orderable": false}, // Ajustes de ancho de columnas 1
-                {"width": "15%", "targets": 0, "orderable": false}, // Ajustes de ancho de columnas 2
-            ],
             language: {
                 paginate: {
                     previous: '<i class="fas fa-angle-left"></i>',
                     next: '<i class="fas fa-angle-right"></i>'
                 }
-            }
+            },
+            columnDefs: [ {
+                'className': 'dtr-control',
+                'orderable': false,
+                'targets':   0
+            } ],
         });
 
         $('#example2').DataTable({

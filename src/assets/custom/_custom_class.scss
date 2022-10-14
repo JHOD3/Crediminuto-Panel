@@ -121,6 +121,7 @@ label{
 }
 .link-icon-hover-danger:hover{
   color: $primary-cm !important;
+  text-decoration: none !important;
 }
 table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:after {
   opacity: 1;
@@ -190,12 +191,12 @@ table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:a
 .mt-0 {
   margin-top: 0 !important;
 }
-table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control {
+table.dataTable.collapsed>tbody>tr>td.dtr-control, table.dataTable.collapsed>tbody>tr>th.dtr-control {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
 }
-table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+table.dataTable.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.collapsed>tbody>tr>th.dtr-control:before {
   left: 0px;
   height: 1em;
   width: 1em;
@@ -213,9 +214,9 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataT
   font-size: 25px;
   font-weight: 500;
   transform: rotate(0deg);
-  margin-top: -2px;
+  margin-top: -13px;
 }
-table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before {
+table.dataTable.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.collapsed>tbody>tr.parent>th.dtr-control:before {
   transform: rotate(45deg);
 }
 table.dataTable>tbody>tr.child span.dtr-title {

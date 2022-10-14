@@ -26,7 +26,7 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 module.exports = (options) => {
-    const dest = Path.join(__dirname, 'cm-panel/dist');
+    const dest = Path.join(__dirname, 'cm-panel','dist');
     let webpackConfig = {
         mode: 'none',
         devtool: options.devtool,
